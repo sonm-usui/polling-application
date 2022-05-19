@@ -8,7 +8,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
   styleUrls: ['./poll-header.component.scss']
 })
 export class PollHeaderComponent implements OnInit {
-  constructor(private route: Router) { }
+  constructor(public route: Router) { }
 
   ngOnInit(): void {
   }
