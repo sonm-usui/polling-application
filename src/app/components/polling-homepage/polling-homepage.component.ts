@@ -11,7 +11,6 @@ export class PollingHomepageComponent implements OnInit {
   constructor(private route: Router) { }
 
   ngOnInit(): void {
-  console.log(document.getElementById('video'));
   }
 
 }

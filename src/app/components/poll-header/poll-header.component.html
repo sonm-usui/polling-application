@@ -30,6 +30,7 @@
             <a class="nav-link" [ngClass]="{'active': setActive('/about-us')}" href="about-us">ABOUT US</a>
           </li>
         </ul>
+        <button type="button" class="btn btn-dark" (click)="connectYourWallet()" *ngIf="!currentAccount">Connect your wallet</button>
       </div>
     </div>
   </nav>
