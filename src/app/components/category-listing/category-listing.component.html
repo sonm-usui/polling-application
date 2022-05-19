@@ -1,1 +1,95 @@
-<p>category-listing works!</p>
+<body>
+<section class="dark" *ngIf="isHeroPoll" style="margin-top: 70px">
+	  <div class="container py-4">
+		<h1 class="h1 text-center" id="pageHeaderTitle1">SELECT YOUR HERO</h1>
+
+		<article class="postcard dark blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://testasmpublic-14e65.kxcdn.com/1652999395_43d77190966b9f3ce16fea36d987f5_usuilogo.png" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="#">USUI</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>View Details to poll</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://testasmpublic-14e65.kxcdn.com/1652999395_43d77190966b9f3ce16fea36d987f5_usuilogo.png" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title red"><a href="#">TAKUMI</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 26th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play red">
+						<a href="#"><i class="fas fa-play mr-2"></i>View Details to poll</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+
+<section class="light" *ngIf="!isHeroPoll">
+	<div class="container py-2" style="margin-top: 80px">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle2">SELECT YOUR BOOK</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://testasmpublic-14e65.kxcdn.com/1652999675_56815616dbd7146cd2745998abe861_harry-potter-book-sets.jpg.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">HARRY POTTER</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>View Details to poll</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://testasmpublic-14e65.kxcdn.com/1652999874_f3ce26399913e6969c701dc76309ae_bookthirf.webp" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">THE BOOK THIEF</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play red">
+						<a href="#"><i class="fas fa-play mr-2"></i>View Details to poll</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+</body>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-polling-homepage',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollingHomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+  console.log(document.getElementById('video'));
   }
 
 }

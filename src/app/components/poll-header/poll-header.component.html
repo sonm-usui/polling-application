@@ -1,6 +1,6 @@
 <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{'bg-dark': route.url !== '/home'}">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -13,7 +13,7 @@
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: auto" fxLayout="row" fxLayoutGap="70px" fxLayoutAlign="center center">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: auto; letter-spacing: 1.5px" fxLayout="row" fxLayoutGap="70px" fxLayoutAlign="center center">
         <li class="nav-item">
             <a class="nav-link"><img height="40px" src="https://testasmpublic-14e65.kxcdn.com/1652993116_f90e1abe063f8a1e83e2b021f456e3_logo.png"></a>
           </li>

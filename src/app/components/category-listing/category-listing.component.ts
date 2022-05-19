@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category-listing',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryListingComponent implements OnInit {
 
-  constructor() { }
+   isHeroPoll: boolean = true;
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+    this.isHeroPoll = this.route.url.includes('hero');
   }
 
 }
