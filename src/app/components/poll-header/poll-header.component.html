@@ -1,0 +1,38 @@
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="true"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: auto" fxLayout="row" fxLayoutGap="70px" fxLayoutAlign="center center">
+        <li class="nav-item">
+            <a class="nav-link"><img height="40px" src="https://testasmpublic-14e65.kxcdn.com/1652993116_f90e1abe063f8a1e83e2b021f456e3_logo.png"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': setActive('/home')}" aria-current="page" href="home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [ngClass]="{'active': setActive('/category-listing?value=hero')}" href="category-listing?value=hero">HERO POLL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': setActive('/category-listing?value=book')}" href="category-listing?value=book">BOOK POLL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': setActive('/about-us')}" href="about-us">ABOUT US</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+</header>
