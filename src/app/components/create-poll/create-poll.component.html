@@ -1,0 +1,44 @@
+<body>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div>
+  </div>
+<div style="padding: 20px" style="margin-top: 100px">
+  <form [formGroup]="pollForm">
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+              <label class="form-label" for="form6Example1">FIRST NAME</label>
+        <input type="text" id="form6Example1" class="form-control" formControlName="firstName"/>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+              <label class="form-label" for="form6Example2">LAST NAME</label>
+        <input type="text" id="form6Example2" class="form-control" formControlName="lastName"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+      <label class="form-label" for="form6Example5">EMAIL</label>
+    <input type="email" id="form6Example5" class="form-control" formControlName="email" />
+  </div>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+        <label class="form-label" for="form6Example7">DESCRIPTION</label></div>
+      <textarea class="form-control" id="form6Example7" rows="4" formControlName="description"></textarea>
+  <!-- Radio --><br>
+   <mat-radio-group fxLayout="column" fxLayoutAlign="center" formControlName="category">
+                       <mat-radio-button class="mb-2" value="book">Book</mat-radio-button>
+                       <mat-radio-button class="mb-2" value="hero">Hero</mat-radio-button>
+   </mat-radio-group><br>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4" (click)="createPoll()">Create Poll</button>
+</form>
+</div>
+</div>
+</body>

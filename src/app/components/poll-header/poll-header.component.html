@@ -1,6 +1,6 @@
 <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{'bg-dark': route.url !== '/home'}">
+  <nav class="navbar navbar-expand-lg navbar-dark" [ngClass]="{'bg-dark': (route.url !== '/home')}" >
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -31,6 +31,7 @@
           </li>
         </ul>
         <button type="button" class="btn btn-dark" (click)="connectYourWallet()" *ngIf="!currentAccount">Connect your wallet</button>
+         <button type="button" class="btn btn-dark" (click)="goToPoll()">Add Your Poll</button>
       </div>
     </div>
   </nav>

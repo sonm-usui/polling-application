@@ -11,7 +11,6 @@ export class PollHeaderComponent implements OnInit {
   constructor(public route: Router) { }
    currentAccount: any;
    ngOnInit(): void {
-   console.log(window['location'] && window['location'].href);
        this.checkForWalletConnect();
   }
 
@@ -55,5 +54,9 @@ export class PollHeaderComponent implements OnInit {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  goToPoll() {
+    this.route.navigate(['/new-poll']);
   }
 }

@@ -1,0 +1,32 @@
+<div class="container">
+<mat-dialog-content>
+    <div class="team-single">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 xs-margin-30px-bottom">
+                <div class="team-single-img">
+                    <img [src]="details?.image" alt="">
+                </div>
+                <div class=" padding-30px-all md-padding-25px-all sm-padding-20px-all text-center">
+                    <h4 class="margin-10px-bottom font-size24 md-font-size22 sm-font-size20 font-weight-600">{{details?.firstName}} {{details?.lastName}}</h4>
+                    <p class="sm-width-95 sm-margin-auto">{{details?.email}}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
+                <div class="team-single-text padding-50px-left sm-no-padding-left">
+                    <h4 class="font-size38 sm-font-size32 xs-font-size30">Description</h4>
+                    <p class="no-margin-bottom">{{details?.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <div class="col-md-12" fxLayout="row" fxLayoutAlign="center">
+                    <button type="button" class="btn btn-dark" (click)="vote()"> Vote for {{details?.firstName}} {{details?.lastName}}</button>&nbsp;
+                     <button type="button" class="btn btn-dark" (click)="cancel()">Cancel</button>
+            </div>
+    </mat-dialog-actions>
+</div>
+
+

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PollingHomepageComponent } from './components/polling-homepage/polling-homepage.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CategoryListingComponent } from './components/category-listing/category-listing.component';
+import { CreatePollComponent } from './components/create-poll/create-poll.component';
 
 const routes: Routes = [
   { path: '',
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'category-listing',
     component: CategoryListingComponent
+  },
+  {
+    path: 'new-poll',
+    component: CreatePollComponent
   }
 ];
 
