@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ethers } from 'ethers';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { EtherService } from '../../services/ether.service';
 
 @Component({
   selector: 'app-poll-header',
@@ -8,9 +9,12 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
   styleUrls: ['./poll-header.component.scss']
 })
 export class PollHeaderComponent implements OnInit {
-  constructor(public route: Router) { }
+  constructor(public route: Router, private etherService: EtherService) { }
    currentAccount: any;
+   isAdmin = false;
    ngOnInit(): void {
+     this.etherService.isAdmin().then( isAdmin => this.isAdmin = isAdmin);
+     console.log('isAdmin', this.isAdmin);
        this.checkForWalletConnect();
   }
 

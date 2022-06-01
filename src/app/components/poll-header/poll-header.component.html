@@ -31,7 +31,7 @@
           </li>
         </ul>
         <button type="button" class="btn btn-dark" (click)="connectYourWallet()" *ngIf="!currentAccount">Connect your wallet</button>
-         <button type="button" class="btn btn-dark" (click)="goToPoll()">Add Your Poll</button>
+         <button type="button" class="btn btn-dark" *ngIf="isAdmin" (click)="goToPoll()">Add Your Poll</button>
       </div>
     </div>
   </nav>

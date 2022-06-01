@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
+import { EtherService } from '../../services/ether.service';
 
 @Component({
   selector: 'app-category-listing',
@@ -58,11 +59,12 @@ The novel is about the adventures of Liesel Meminger in Germany during a time of
       email: 'davinci@selise.ch'
    }
    ];
-  constructor(private route: Router, private dialog: MatDialog) { }
+  constructor(private route: Router, private dialog: MatDialog, private etherService: EtherService) { }
 
 
   ngOnInit(): void {
     this.isHeroPoll = this.route.url.includes('hero');
+    // console.log('hello', this.etherService.isAdmin());
   }
 
   showDetails(details: any) {
@@ -72,5 +74,16 @@ The novel is about the adventures of Liesel Meminger in Germany during a time of
       panelClass: 'custom-dialog',
          data: details
       }).afterClosed().subscribe()
+  }
+
+  addCandiddates(){
+  this.heroList.forEach( value => {
+    const fullName = value.firstName + value.lastName;
+       this.etherService.addCandidates(fullName);
+    })
+  }
+
+  getCandidate(){
+     this.etherService.getCandidate();
   }
 }
