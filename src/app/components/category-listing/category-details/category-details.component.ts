@@ -13,7 +13,7 @@ export class CategoryDetailsComponent implements OnInit {
 
 details!: any;
  currentAccount: any;
-  contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+  contractAddress = '0xe117e8EfA2f1CC538c45F3b891E6A5f032C8EEB9';
   contractABI = polling.abi;
 
   constructor(public dialogRef: MatDialogRef<CategoryDetailsComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
