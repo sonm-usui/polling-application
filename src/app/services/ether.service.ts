@@ -109,4 +109,23 @@ export class EtherService {
       return false;
     }
     }
+
+  async selectWinner() {
+    try {
+       const ethereum = (window as any).ethereum;
+      if (ethereum) {
+       const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const wavePortalContract = new ethers.Contract(this.contractAddress, this.contractABI, signer);
+        const count1 = await wavePortalContract['winnerName']();
+        // const accounts = await ethereum.request({ method: 'eth_accounts' });
+       alert('Winner is ' + count1);
+      } else {
+        console.log('Ethereum object doesnt exist');
+      }
+
+    } catch (error) {
+      alert(error);
+    }
+  }
 }

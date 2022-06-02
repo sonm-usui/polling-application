@@ -1,7 +1,10 @@
 <body>
 <section class="dark" *ngIf="isHeroPoll" >
 		<h1 class="h1 text-center" id="pageHeaderTitle1" style="padding-top: 90px">SELECT YOUR HERO</h1>
-<!--		<button type="button" class="btn btn-dark" (click)="addCandiddates()">Add Candidates</button> <button type="button" class="btn btn-dark" (click)="getCandidate()">Get Candidates</button>-->
+<!--		<button type="button" class="btn btn-dark" (click)="addCandiddates()">Add Candidates</button>-->
+<!--		<button type="button" class="btn btn-dark" (click)="addCandiddates()">Add Candidates</button>-->
+<!--		 <button type="button" class="btn btn-dark" (click)="getCandidate()">Get Candidates</button>-->
+<button type="button" class="btn btn-dark" (click)="selectWinner()">Select Winner</button>
 <ng-container *ngFor="let list of heroList; let i = index">
   <div class="container py-4">
 		<article class="postcard dark blue">

@@ -86,4 +86,8 @@ The novel is about the adventures of Liesel Meminger in Germany during a time of
   getCandidate(){
      this.etherService.getCandidate();
   }
+
+  selectWinner() {
+   this.etherService.selectWinner();
+  }
 }
